@@ -80,28 +80,14 @@ def hexadecimal_a_decimal():
     hexadecimal = input("Ingrese el número hexadecimal: ")
     # Obtener la cantidad de cifras del hexadecimal.
     cant_cifras = len(str(hexadecimal))
-    # Obtener la maxima potencia. Como la de la primer cifra es 0, la maxima es la cant de cifras menos uno.
+    # Obtener la máxima potencia. Como la de la primer cifra es 0, la máxima es la cant de cifras menos uno.
     potencia = cant_cifras - 1
     # Inicializar variable decimal en 0.
     decimal = 0
     # Crear diccionario con valores numéricos de los dígitos hexadecimales
     valores_hexadecimal = {
-        '0': 0,
-        '1': 1,
-        '2': 2,
-        '3': 3,
-        '4': 4,
-        '5': 5,
-        '6': 6,
-        '7': 7,
-        '8': 8,
-        '9': 9,
-        'A': 10,
-        'B': 11,
-        'C': 12,
-        'D': 13,
-        'E': 14,
-        'F': 15
+        '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
+        '9': 9, 'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15
     }
     # Recorrer cada cifra del hexadecimal
     for digito in hexadecimal:
@@ -118,26 +104,12 @@ def decimal_a_hexadecimal():
     decimal = int(input("Ingrese el número decimal: "))
     # Asignar el decimal a una variable aux para operarla sin afectar el número ingresado.
     aux = decimal
-    # Inicializar la variable octal como un string vacío.
+    # Inicializar la variable hexadecimal como un string vacío.
     hexadecimal = ''
     # Crear diccionario con valores numéricos de los dígitos hexadecimales
     valores_hexadecimal = {
-        0: '0',
-        1: '1',
-        2: '2',
-        3: '3',
-        4: '4',
-        5: '5',
-        6: '6',
-        7: '7',
-        8: '8',
-        9: '9',
-        10: 'A',
-        11: 'B',
-        12: 'C',
-        13: 'D',
-        14: 'E',
-        15: 'F'
+        0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8',
+        9: '9', 10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F'
     }
     # Recorrer cada cifra decimal y obtener parte entera y resto de la division por 16.
     while aux > 0: # El bucle se ejecuta mientras aux sea mayor a 0.
@@ -145,7 +117,7 @@ def decimal_a_hexadecimal():
         hexadecimal = hexadecimal + valores_hexadecimal[aux % 16]
         # Actualizar aux con la parte entera de la división por 16 para operarla en la próxima iteración.
         aux = aux//16
-    # Invertir el string generardo para obtener el orden correcto de las cifras octales.
+    # Invertir el string generardo para obtener el orden correcto de las cifras hexadecimales.
     hexadecimal = hexadecimal[::-1]
     # Informar el resultado
     print(f"{decimal} decimal en hexadecimal es igual a {hexadecimal}")
